@@ -118,12 +118,13 @@ def form1():
         albumName2 = response_dict['results'][1]['collectionName']
         albumName3 = response_dict['results'][2]['collectionName']
 
-
         if request.form.get('track'):
             return formstring+"{} - Song: {}, {}, {}".format(artist_name, trackName, trackName2, trackName3)
+
+
         if request.form.get('album'):
             return formstring+"{} - Album: {}, {}, {}".format(artist_name, albumName, albumName2, albumName3)
-
+            
     else:
         return formstring
 
